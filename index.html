@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>LFG Site | Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style type="text/css">
+
+            body
+            {
+                background-image:url(images/background.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <header id="header">
+            <div class="navigation">
+                <div class="leftlogo">
+                    <a href="#" class="logo" style="text-decoration:none">
+                        <div class="imglogo"><img src = "images/logo.png" style="width:50px;height:50px"></div>
+                        <div class="txtlogo">LFG NETWORK</div>
+                     <span class="icon">
+                     <ion-icon name="information-circle-outline"></ion-icon>
+                    </span></a>
+                </div>
+                
+                <div class="rightnav">
+                    <div class="lists">
+                    <ul>
+                        <li class="list active">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="home-outline"></ion-icon>
+                                </span>
+                                <span class="text">Home</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="text">Friends</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="time-outline"></ion-icon>
+                                </span>
+                                <span class="text">History</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </span>
+                                <span class="text">Profile</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="text">Settings</span>
+                            </a>
+                        </li>
+                    <div class="indicator"></div>
+                    </ul>
+                </div>
+            </div>
+            
+        </header>
+
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) => 
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+
+            list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+            
+        </script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    </body>
+
+
+</html>
