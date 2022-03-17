@@ -1,174 +1,147 @@
 *
 {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root
-{
-    --clr:rgb(31, 25, 112);
-}
 body
-
 {
+    background: #0c152e;
+    font-family: 'Barlow', sans-serif ;
+    height: 200vh;
+}
+
+.container
+{
+    width: 100%;
+    height: 10vh;
+    background:#0f1e47;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+
+}
+
+header
+{
+    width:100%;
+    height: 10vh;
     display: flex;
-    background: var(--clr);
     
+    align-items: center;
 }
 
 .logo
 {
-    background:#fff;
-    border-radius: 50px;
-    width: 400px;
-    height: 70px;
-    position: fixed;
+    width: 300px;
+    height: 10v;
     display: flex;
-    top:70px;
-    left:70px;
-}
-
-.imglogo
-{
-    margin-top:11px;
-    margin-left:15px;
-}
-
-.txtlogo
-{
-    margin-top:15px;
-    margin-left:50px;
-    font-size: 25px;
-    color:var(--clr);
-    font-weight: 900;
-    letter-spacing: 0.05em;
-}
-
-.logo .icon
-{
-    font-size: 2em;
-    margin-left:50px;
-    margin-top:15px;
-    color:var(--clr);
-}
-
-
-.lists
-{
-    
-    width:400px;
-    height: 70px;
-    background: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 30px;
-    margin-top: 20px;
-    top:70px;
-    left:1440px;
-    
-    
+    color: #fff;
+    padding: 30px;
+    line-height: 1.5rem;
+    margin-left:auto;
 }
 
-.lists ul
+.logo .fa-solid
+{
+    font-size:45px;
+}
+
+.logo p
+{
+    width: 130px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+ul.navbar
 {
     display: flex;
-    width: 350px;
+    list-style: none;
+    margin-right: auto;
+    padding: 10px;
 }
 
-.lists ul li
+ul.navbar li
 {
     position: relative;
     list-style: none;
-    width: 70px;
-    height: 70px;
+    width: 50px;
     z-index: 1;
 }
 
-.lists ul li a
+ul.navbar li a 
 {
+    
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    font-weight:500;
 }
 
-.lists ul li a .icon
+ul.navbar li a .icon
 {
+    
     position: relative;
     display: block;
     line-height: 75px;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     transition: 0.5s;
-    color: var(--clr);
+    color:white;
 }
 
-.lists ul li.active a .icon
-{
-    transform: translateY(-32px);
-}
 
-.lists ul li a .text
+
+ul.navbar li a .text
 {
     position: absolute;
-    color: var(--clr);
-    font-weight: 1000;
+    opacity: 0;
     font-size: 1em;
     letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
 }
 
-.lists ul li.active a .text
+ul.navbar li.active a .text
 {
     opacity: 1;
     transform: translateY(10px);
 }
 
-.indicator
+#btn
 {
-    position: absolute;
-    top:-50%;
-    width: 70px;
-    height: 70px;
-    background: rgb(62, 109, 238);
-    border-radius: 50%;
-    border: 6px solid var(--clr);
-    transition: 0.5s;
+    width: 300px;
+    height: 10vh;
+    background: aliceblue;
+    color: #000;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
 }
 
-
-
-.lists ul li:nth-child(1).active ~ .indicator
+.slideshow
 {
-    transform: translateX(calc(70px * 0));
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: block;
+    box-shadow: 0 10px 10px 0 rgb(0, 0, 0); 
+    opacity: 0.5;
 }
 
-.lists ul li:nth-child(2).active ~ .indicator
+.slideshow .val
 {
-    transform: translateX(calc(70px * 1));
+    width: 1280px;
+    height: 720px;
+    object-fit:fill;
 }
-
-.lists ul li:nth-child(3).active ~ .indicator
-{
-    transform: translateX(calc(70px * 2));
-}
-
-.lists ul li:nth-child(4).active ~ .indicator
-{
-    transform: translateX(calc(70px * 3));
-}
-
-.lists ul li:nth-child(5).active ~ .indicator
-{
-    transform: translateX(calc(70px * 4));
-}
-

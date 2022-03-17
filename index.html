@@ -1,106 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd3e3670f.js" crossorigin="anonymous"></script>
+    <title>LFG Site</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-circle-plus"></i>
+            <p>LFG Network</p>
+        </div>
+        <button type="button" id="btn">Play</button>
+        <ul class="navbar">
+            <li><a href="#" class="active"> 
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+            <span class="text">Home</span> </a></li>
+            <li><a href="#"> 
+                <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                </span>
+            <span class="text">Friends</span> </a></li>
+            <li><a href="#"> 
+                <span class="icon">
+                    <ion-icon name="time-outline"></ion-icon>
+                </span>
+            <span class="text">History</span> </a></li>
+            <li><a href="#"> 
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+            <span class="text">Profile</span> </a></li>
+            <li><a href="#">
+                <span class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </span>
+            <span class="text">Settings</span></a></li>
+            <div class="indicator"></div>
+        </ul>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>LFG Site | Home</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <style type="text/css">
+    </header>
+    </div>
 
-            body
-            {
-                background-image:url(images/background.jpg);
-                background-size: cover;
-                background-attachment: fixed;
-            }
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        </style>
-
-    </head>
-
-    <body>
-        <header id="header">
-            <div class="navigation">
-                <div class="leftlogo">
-                    <a href="#" class="logo" style="text-decoration:none">
-                        <div class="imglogo"><img src = "images/logo.png" style="width:50px;height:50px"></div>
-                        <div class="txtlogo">LFG NETWORK</div>
-                     <span class="icon">
-                     <ion-icon name="information-circle-outline"></ion-icon>
-                    </span></a>
-                </div>
-                
-                <div class="rightnav">
-                    <div class="lists">
-                    <ul>
-                        <li class="list active">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                </span>
-                                <span class="text">Home</span>
-                            </a>
-                        </li>
-                        <li class="list">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="people-outline"></ion-icon>
-                                </span>
-                                <span class="text">Friends</span>
-                            </a>
-                        </li>
-                        <li class="list">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="time-outline"></ion-icon>
-                                </span>
-                                <span class="text">History</span>
-                            </a>
-                        </li>
-                        <li class="list">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="person-outline"></ion-icon>
-                                </span>
-                                <span class="text">Profile</span>
-                            </a>
-                        </li>
-                        <li class="list">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="settings-outline"></ion-icon>
-                                </span>
-                                <span class="text">Settings</span>
-                            </a>
-                        </li>
-                    <div class="indicator"></div>
-                    </ul>
-                </div>
-            </div>
-            
-        </header>
+    <div class="slideshow">
+        <img src="/backgrounds/bg-valorant.jpg" class="val" alt="valorant-img">
+    </div>
+    
 
 
-        <script>
-            const list = document.querySelectorAll('.list');
-            function activeLink(){
-                list.forEach((item) => 
-                item.classList.remove('active'));
-                this.classList.add('active');
-            }
 
-            list.forEach((item) =>
-            item.addEventListener('click', activeLink));
-            
-        </script>
-
-
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-    </body>
-
-
+</body>
 </html>
