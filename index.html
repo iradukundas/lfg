@@ -1,63 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1bd3e3670f.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1bd3e3670f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>LFG Site</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <header>
+      <header>
         <div class="logo">
-            <i class="fa-solid fa-circle-plus"></i>
-            <p>LFG Network</p>
+          <i class="fa-solid fa-circle-plus"></i>
+          <p>LFG Network</p>
         </div>
         <button type="button" id="btn">Play</button>
         <ul class="navbar">
-            <li><a href="#" class="active"> 
-                <span class="icon">
-                    <ion-icon name="home-outline"></ion-icon>
-                </span>
-            <span class="text">Home</span> </a></li>
-            <li><a href="#"> 
-                <span class="icon">
-                    <ion-icon name="people-outline"></ion-icon>
-                </span>
-            <span class="text">Friends</span> </a></li>
-            <li><a href="#"> 
-                <span class="icon">
-                    <ion-icon name="time-outline"></ion-icon>
-                </span>
-            <span class="text">History</span> </a></li>
-            <li><a href="#"> 
-                <span class="icon">
-                    <ion-icon name="person-outline"></ion-icon>
-                </span>
-            <span class="text">Profile</span> </a></li>
-            <li><a href="#">
-                <span class="icon">
-                    <ion-icon name="settings-outline"></ion-icon>
-                </span>
-            <span class="text">Settings</span></a></li>
-            <div class="indicator"></div>
+          <li>
+            <a href="#" class="active">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <span class="text">Friends</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="time-outline"></ion-icon>
+              </span>
+              <span class="text">History</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="person-outline"></ion-icon>
+              </span>
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="text">Settings</span></a
+            >
+          </li>
         </ul>
-
-    </header>
+      </header>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
     <div class="slideshow">
-        <img src="/backgrounds/bg-valorant.jpg" class="val" alt="valorant-img">
+      <div class="slides">
+        <img
+          src="/backgrounds/bg-valorant.jpg"
+          class="val"
+          alt="valorant-img"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slides">
+        <img src="/backgrounds/bg-leagueoflegends.png" class="lol" alt="lol-img" style="width: 100%" />
+      </div>
+      <div class="slides">
+        <img src="/backgrounds/bg-overwatch.png" class="ow" alt="ow-img" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
+    <br />
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
-</body>
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+    </script>
+  </body>
 </html>
